@@ -123,8 +123,11 @@ window.onload = () => {
 };
 
 function toggleStatus(id) {
-   let finStatud
-  status === "read"? "not read": "read"
+  let finStatud = books.find(e=>e.id === id)
+  finStatud.status= finStatud.status=== "read"? "not read": "read"
+  //Do not touch these
+  saveBooks();
+  displayBooks();
 }
 
 
