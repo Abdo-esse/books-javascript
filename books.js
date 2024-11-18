@@ -113,14 +113,7 @@ function saveBooks() {
     localStorage.setItem('books', JSON.stringify(books));
 }
 
-// Load books from local storage or JSON file on page load
-window.onload = () => {
-    const savedBooks = localStorage.getItem('books');
-    if (savedBooks) {
-        books = JSON.parse(savedBooks);
-        displayBooks();
-    }
-};
+
 
 function toggleStatus(id) {
   let finStatud = books.find(e=>e.id === id)
